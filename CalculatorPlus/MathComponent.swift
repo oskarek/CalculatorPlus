@@ -8,13 +8,15 @@
 
 import Foundation
 
-enum MathComponent: CustomStringConvertible {
+enum MathComponent {
   case number(Int)
   case leftParen
   case rightParen
   case decimal
   case operation(Operation)
-  
+}
+
+extension MathComponent: CustomStringConvertible {
   var description: String {
     switch self {
     case .number(let value): return String.init(value)

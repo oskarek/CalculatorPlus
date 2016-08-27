@@ -10,4 +10,8 @@ import Foundation
 
 struct MathExpressionParser {
   
+  static func parse(_ expression: String) -> Double {
+    return expression.components(separatedBy: "+").flatMap(Double.init).reduce(0, +)
+  }
+  
 }

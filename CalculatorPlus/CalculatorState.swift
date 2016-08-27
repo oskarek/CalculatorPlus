@@ -13,10 +13,7 @@ struct CalculatorState {
   static let cleared = CalculatorState(mathComponents: [])
   
   var resultString: String {
-    return mathComponents
-      .flatMap { Int($0.description) }
-      .reduce(0, +)
-      .description
+    return MathExpressionParser.parse(displayString).description
   }
   var displayString: String {
     return mathComponents.map{ $0.description }.joined()

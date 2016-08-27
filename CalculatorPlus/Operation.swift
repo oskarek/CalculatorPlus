@@ -8,9 +8,24 @@
 
 import Foundation
 
-enum Operation: CustomStringConvertible {
-  case multiply, divide, add, subtract, pi, e, sin, cos, tan, asin, acos, atan, sqrt, squared
-  
+enum Operation {
+  case multiply
+  case divide
+  case add
+  case subtract
+  case pi
+  case e
+  case sin
+  case cos
+  case tan
+  case asin
+  case acos
+  case atan
+  case sqrt
+  case squared
+}
+
+extension Operation: CustomStringConvertible {
   var description: String {
     switch self {
     case .multiply: return "×"
