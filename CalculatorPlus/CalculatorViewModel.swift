@@ -37,8 +37,6 @@ struct CalculatorViewModel {
     
     displayText = state.map { state in state.displayString }
     
-    resultText = state.map { state in state.resultString }
-    
+    resultText = state.map { state in state.resultString } 
   }
-  
 }

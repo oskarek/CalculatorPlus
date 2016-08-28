@@ -19,7 +19,7 @@ enum MathComponent {
 extension MathComponent: CustomStringConvertible {
   var description: String {
     switch self {
-    case .number(let value): return String.init(value)
+    case .number(let value): return String(value)
     case .leftParen: return "("
     case .rightParen: return ")"
     case .decimal: return .decimal
