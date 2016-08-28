@@ -54,12 +54,12 @@ extension UIButton {
     addSubview(whitebox)
     
     let reverseAnimation = { (_: Bool) in
-      UIView.animate(withDuration: 0.08,
+      UIView.animate(withDuration: 0.04,
                      animations: { whitebox.alpha = 0},
                      completion: { _ in whitebox.removeFromSuperview() })
     }
     
-    UIView.animate(withDuration: 0.08,
+    UIView.animate(withDuration: 0.04,
                    animations: { whitebox.alpha = 0.4 },
                    completion: reverseAnimation)
   }
