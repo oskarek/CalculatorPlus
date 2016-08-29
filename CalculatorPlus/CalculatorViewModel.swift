@@ -20,10 +20,10 @@ struct CalculatorViewModel {
   // MARK: Variables
   
   /// The current string to display in the calculator display
-  var displayText: Observable<String?>
+  var displayText: Observable<String>
   
   /// The current string to display in the result display
-  var resultText: Observable<String?>
+  var resultText: Observable<String>
   
   /// Actions to change the state of the calculator
   var actions = PublishSubject<CalculatorAction>()
@@ -35,9 +35,8 @@ struct CalculatorViewModel {
         state.transformed(with: action)
       }
     
-    displayText = state.map { state in state.displayString }
+    displayText = state.flatMapLatest { state in state.displayString }
     
-    resultText = state.flatMapLatest { state in state.resultStringObs }
-//    resultText = state.map { state in state.resultString } 
+    resultText = state.flatMapLatest { state in state.resultString }
   }
 }

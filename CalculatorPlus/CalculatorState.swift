@@ -15,13 +15,13 @@ struct CalculatorState {
   
   init(mathComponents: [MathComponent]) {
     self.mathComponents = mathComponents
-    let displayString = mathComponents.map{ $0.description }.joined()
+    let displayString = Observable.just(mathComponents.map{ $0.description }.joined())
     self.displayString = displayString
-    resultStringObs = MathBrain.parse(displayString).map { $0.description }
+    resultString = displayString.flatMap(MathBrain.calculateResult).map(String.init)
   }
   
-  let resultStringObs: Observable<String?>
-  let displayString: String
+  let resultString: Observable<String>
+  let displayString: Observable<String>
   let mathComponents: [MathComponent]
 }
 

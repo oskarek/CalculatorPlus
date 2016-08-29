@@ -113,11 +113,11 @@ class CalculatorViewController: UIViewController {
   
   // Set up all the bindings from the view model to the UI
   private func bindViewModelToUI() {
-    
+
     viewModel.displayText
       .bindTo(display.rx.text)
       .addDisposableTo(disposeBag)
-    
+
     viewModel.resultText
       .bindTo(resultDisplay.rx.text)
       .addDisposableTo(disposeBag)

@@ -23,6 +23,7 @@
 		FF91F8A11D41611500B8BB05 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91F8A01D41611500B8BB05 /* CalculatorViewModel.swift */; };
 		FFD8EE551D365D06008CD5D6 /* CalculatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8EE541D365D06008CD5D6 /* CalculatorState.swift */; };
 		FFD8EE571D369346008CD5D6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8EE561D369346008CD5D6 /* String+Extensions.swift */; };
+		FFFC77AE1D7483190077F816 /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC77AD1D7483190077F816 /* ObservableType+Extensions.swift */; };
 		FFFEB05D1D37929100B6125B /* MathBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEB05C1D37929100B6125B /* MathBrain.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		FF91F8A01D41611500B8BB05 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		FFD8EE541D365D06008CD5D6 /* CalculatorState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorState.swift; sourceTree = "<group>"; };
 		FFD8EE561D369346008CD5D6 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FFFC77AD1D7483190077F816 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
 		FFFEB05C1D37929100B6125B /* MathBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			children = (
 				FFD8EE561D369346008CD5D6 /* String+Extensions.swift */,
 				FF191C831D4178E400B08C59 /* UIButton+Extensions.swift */,
+				FFFC77AD1D7483190077F816 /* ObservableType+Extensions.swift */,
 			);
 			name = "Supporting files";
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				FF6DEBFA1D3C0640000168BD /* MathComponent.swift in Sources */,
 				FF341B2F1D3407CE009B02D6 /* AppDelegate.swift in Sources */,
 				FFD8EE551D365D06008CD5D6 /* CalculatorState.swift in Sources */,
+				FFFC77AE1D7483190077F816 /* ObservableType+Extensions.swift in Sources */,
 				FFD8EE571D369346008CD5D6 /* String+Extensions.swift in Sources */,
 				FF191C841D4178E400B08C59 /* UIButton+Extensions.swift in Sources */,
 				FF6DEBF61D3BC764000168BD /* CalculatorAction.swift in Sources */,

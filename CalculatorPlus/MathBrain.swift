@@ -13,7 +13,7 @@ struct MathBrain {
   
   private let lexer = MathExpressionLexer()
   
-  static func parse(_ expression: String) -> Observable<Double> {
+  static func calculateResult(_ expression: String) -> Observable<Double> {
     return Observable.create { observer in
       DispatchQueue.global(qos: .utility).async {
         let res = expression.components(separatedBy: "+").flatMap(Double.init).reduce(0, +)
