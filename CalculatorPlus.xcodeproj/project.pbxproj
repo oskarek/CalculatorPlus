@@ -80,13 +80,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF0AFC8A1D46656700E4342F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FF341B221D3407CE009B02D6 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +102,6 @@
 		FF341B2D1D3407CE009B02D6 /* CalculatorPlus */ = {
 			isa = PBXGroup;
 			children = (
-				FF0AFC8A1D46656700E4342F /* Frameworks */,
 				FF91F8A51D41618F00B8BB05 /* Supporting files */,
 				FF91F8A41D41618300B8BB05 /* View */,
 				FF91F8A31D41617A00B8BB05 /* ViewModel */,

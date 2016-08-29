@@ -7,13 +7,23 @@
 //
 
 import Foundation
+import RxSwift
 
 struct MathBrain {
   
   private let lexer = MathExpressionLexer()
   
-  static func parse(_ expression: String) -> Double {
-    return expression.components(separatedBy: "+").flatMap(Double.init).reduce(0, +)
+  static func parse(_ expression: String) -> Observable<Double> {
+    return Observable.create { observer in
+      DispatchQueue.global(qos: .utility).async {
+        let res = expression.components(separatedBy: "+").flatMap(Double.init).reduce(0, +)
+        DispatchQueue.main.async {
+          observer.on(.next(res))
+          observer.on(.completed)
+        }
+      }
+      return Disposables.create()
+    }
   }
   
   static func _parse(_ expression: String) -> Double {

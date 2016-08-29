@@ -7,17 +7,21 @@
 //
 
 import Foundation
+import RxSwift
 
 struct CalculatorState {
   /// A clean state.
   static let cleared = CalculatorState(mathComponents: [])
   
-  var resultString: String {
-    return MathBrain.parse(displayString).description
+  init(mathComponents: [MathComponent]) {
+    self.mathComponents = mathComponents
+    let displayString = mathComponents.map{ $0.description }.joined()
+    self.displayString = displayString
+    resultStringObs = MathBrain.parse(displayString).map { $0.description }
   }
-  var displayString: String {
-    return mathComponents.map{ $0.description }.joined()
-  }
+  
+  let resultStringObs: Observable<String?>
+  let displayString: String
   let mathComponents: [MathComponent]
 }
 
